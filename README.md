@@ -1,1 +1,3 @@
-# spm-infrastructure-openmensa
+# OpenMensaInfrastructure
+
+A description of this package.
