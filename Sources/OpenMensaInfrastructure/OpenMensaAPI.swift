@@ -16,13 +16,13 @@ public class OpenMensaAPI {
         
     }
     
-    func getCanteens() async throws -> Canteens {
+    public func getCanteens() async throws -> Canteens {
         let request = URLRequest(url: url.appendingPathComponent("canteens"))
         let (data, response) = try await session.data(for: request)
         return try self.processResponse(data: data, response: response)
     }
     
-    func getDays(for canteen: Int) async throws -> Days {
+    public func getDays(for canteen: Int) async throws -> Days {
         let request = URLRequest(url: url.appendingPathComponent("canteens")
                                     .appendingPathComponent("\(canteen)")
                                     .appendingPathComponent("days"))
@@ -30,7 +30,7 @@ public class OpenMensaAPI {
         return try self.processResponse(data: data, response: response)
     }
     
-    func getMeals(for canteen: Int, on date: Date) async throws -> Meals {
+    public func getMeals(for canteen: Int, on date: Date) async throws -> Meals {
         let days = try await getDays(for: canteen)
         let formatter = DateFormatter()
         formatter.dateFormat = OpenMensaAPI.dateFormat
@@ -52,7 +52,7 @@ public class OpenMensaAPI {
         throw FetchError.noMealsForDate
     }
     
-    func getTodaysMeals(for canteen: Int) async throws -> Meals {
+    public func getTodaysMeals(for canteen: Int) async throws -> Meals {
         return try await getMeals(for: canteen, on: Date())
     }
     

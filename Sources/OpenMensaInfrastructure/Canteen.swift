@@ -6,11 +6,11 @@
 import Foundation
 
 // MARK: - Canteen
-struct Canteen: Codable {
+public struct Canteen: Codable {
     let id: Int
     let name, city: String
     let address: String
     let coordinates: [Double]?
 }
 
-typealias Canteens = [Canteen]
+public typealias Canteens = [Canteen]

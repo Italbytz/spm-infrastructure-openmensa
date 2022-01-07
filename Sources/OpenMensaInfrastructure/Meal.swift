@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - Meal
-struct Meal: Codable {
+public struct Meal: Codable {
     let id: Int
     let name, category: String
     let prices: Prices
@@ -14,11 +14,11 @@ struct Meal: Codable {
 }
 
 // MARK: - Prices
-struct Prices: Codable {
+public struct Prices: Codable {
     let students, employees: Double?
     let pupils: Double?
     let others: Double?
 }
 
-typealias Meals = [Meal]
+public typealias Meals = [Meal]
 

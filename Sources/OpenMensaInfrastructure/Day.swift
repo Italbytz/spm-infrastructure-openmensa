@@ -6,9 +6,9 @@
 import Foundation
 
 // MARK: - Day
-struct Day: Codable {
+public struct Day: Codable {
     let date: String
     let closed: Bool
 }
 
-typealias Days = [Day]
+public typealias Days = [Day]
