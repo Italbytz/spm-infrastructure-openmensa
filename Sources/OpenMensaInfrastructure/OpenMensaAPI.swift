@@ -12,6 +12,10 @@ public class OpenMensaAPI {
     let session = URLSession(configuration: .default)
     public static let dateFormat = "yyyy-MM-dd"
     
+    public init() {
+        
+    }
+    
     func getCanteens() async throws -> Canteens {
         let request = URLRequest(url: url.appendingPathComponent("canteens"))
         let (data, response) = try await session.data(for: request)
