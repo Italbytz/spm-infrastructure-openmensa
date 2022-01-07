@@ -7,8 +7,8 @@ import Foundation
 
 // MARK: - Day
 public struct Day: Codable {
-    let date: String
-    let closed: Bool
+    public let date: String
+    public let closed: Bool
 }
 
 public typealias Days = [Day]

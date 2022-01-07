@@ -7,17 +7,15 @@ import Foundation
 
 // MARK: - Meal
 public struct Meal: Codable {
-    let id: Int
-    let name, category: String
-    let prices: Prices
-    let notes: [String]
+    public let id: Int
+    public let name, category: String
+    public let prices: Prices
+    public let notes: [String]
 }
 
 // MARK: - Prices
 public struct Prices: Codable {
-    let students, employees: Double?
-    let pupils: Double?
-    let others: Double?
+    public let students, employees, pupils, others: Double?
 }
 
 public typealias Meals = [Meal]

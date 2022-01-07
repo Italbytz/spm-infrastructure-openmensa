@@ -7,10 +7,9 @@ import Foundation
 
 // MARK: - Canteen
 public struct Canteen: Codable {
-    let id: Int
-    let name, city: String
-    let address: String
-    let coordinates: [Double]?
+    public let id: Int
+    public let name, city, address: String
+    public let coordinates: [Double]?
 }
 
 public typealias Canteens = [Canteen]
